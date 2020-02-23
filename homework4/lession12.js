@@ -85,18 +85,12 @@ for(let c of cmds){
     if(c.shape === 'rect')
     {
      
-        for(let i = 0 ; i < 4 ; i++)
+        for(let i = 0 ; i < 2 ; i++)
         {
-            if(i%2==0)
-            {
-                fd(c.height)
-                rt(90)
-            }
-            else
-            {
-            fd(c.width)
+            fd(c.height)
             rt(90)
-            }
+            fd(c.width)
+            rt(90)        
         }
     }
     if(c.shape === 'circle')
