@@ -31,8 +31,7 @@ let a = [
     category:'charger',
     providers :['tgdd','cellphone','pknbr']
 
-   }
-    
+   }   
 ]
 for(let i = 0;i<a.length;i++){
 
@@ -60,11 +59,15 @@ for(let j = 0;j < a.length;j++){
 }
 var cs = prompt('nhập vào nhà cung cáp')
 for(let j = 0; j<a.length; j++){
-if(a[j]['providers'].indexOf(cc,0)!== -1){
+if(a[j]['providers'].indexOf(cs,0) !== -1){
         
     for( let c in a[j]){
+        if( c !== 'providers' ){
         console.log(a[j][c])
+        }
+    else console.log(...a[j]['providers'])
     }
-   }
+}
+
 
 }
