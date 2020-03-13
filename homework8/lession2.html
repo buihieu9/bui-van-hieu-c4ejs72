@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 700px;
+        }
+        #items {
+            margin-right: 20px ;
+        }
+        
+     </style>
+     
+</head>
+<body>
+       
+        <div id="box1">
+            <div id="items">
+                <input type="text" id="a" >
+                <button id="started">start</button>
+                <button id="stopp">stop</button>
+             </div>
+             
+                <p id="aa"></p>
+       </div>
+
+       
+    <script>
+        var input = document.getElementById('a')
+        var start = document.getElementById('started')
+        var stops = document.getElementById('stopp')
+        var title = document.getElementById('aa')
+        let a;
+        // input.addEventListener('click', function() {
+        //     time = Number(input.value)
+        //     console.log(time)
+        // })
+      
+        
+        start.addEventListener('click', function() {
+           let time = Number(input.value);
+        a = setInterval(function() {
+                title.innerText= time
+                time--
+                if(time == 0) {
+                    clearInterval(a)
+                    title.innerText = 'time up'
+                }
+            }, 1000);
+             
+      })
+        stops.addEventListener('click', function() {
+   
+            clearInterval(a)
+            title.innerText = 'Paused';
+        })
+    </script>
+</body>
+</html>
+</html>

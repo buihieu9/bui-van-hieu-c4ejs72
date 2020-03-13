@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        div {
+            height: 700px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #tong {
+            margin-right: 10px;
+            background-color: blanchedalmond;
+        }
+        #hieu {
+            margin-left: 10px;
+            background-color: blanchedalmond;
+        }
+
+    </style>
+</head>
+<body>   
+    <div>
+        <button id="tong">+</button> 
+    <p id="demo"> </p>
+    <button id="hieu">-</button> 
+    </div>
+    
+    <script>
+        var a = 0;
+        document.getElementById("demo").innerHTML = a
+    document.getElementById("tong").addEventListener("click", function() {
+        document.getElementById("demo").innerHTML = a++ ;
+    });
+    
+    
+    document.getElementById("hieu").addEventListener("click", function() {
+        document.getElementById("demo").innerHTML = a-- ;
+    });
+    
+    
+</script>
+</body>
+</html>
